@@ -15,6 +15,9 @@ import { Textarea } from '@/components/ui/textarea';
 
 const AddNewInterview = () => {
     const [openDialog, setOpenDialog] = useState(false);
+    const [jobPosition, setJobPosition] = useState();
+    const [jobDesc, setJobDesc] = useState();
+    const [jobExp, setJobExp] = useState();
     return (
         <div>
             <div onClick={() => setOpenDialog(true)} className='p-10 border rounded-lg bg-secondary hover:scale-105 hover:shadow-md cursor-pointer transition-all'>
@@ -32,17 +35,17 @@ const AddNewInterview = () => {
                                     <h2 className='text-2xl'>Add Details about your job position/role, Job description and years of expirence</h2>
                                     <div className='mt-7 my-3'>
                                         <label htmlFor="">Job Role/Job Position</label>
-                                        <Input placeholder="Ex. Full Stack Developer" required />
+                                        <Input onChange={(e) => setJobPosition(e.target.value)} placeholder="Ex. Full Stack Developer" required />
                                     </div>
 
                                     <div className='my-3'>
                                         <label htmlFor="">Job Description/ Tech Stack(In Short)</label>
-                                        <Textarea placeholder="Ex. React, Angular, NodeJs etc" required />
+                                        <Textarea onChange={(e) => setJobDesc(e.target.value)} placeholder="Ex. React, Angular, NodeJs etc" required />
                                     </div>
 
                                     <div className='my-3'>
                                         <label htmlFor="">Years of expirence</label>
-                                        <Input placeholder="Ex. 5" type="number" required />
+                                        <Input onChange={(e) => setJobExp(e.target.value)} placeholder="Ex. 5" type="number" required />
                                     </div>
                                 </div>
                                 <div className='flex gap-5 justify-end'>
