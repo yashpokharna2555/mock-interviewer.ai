@@ -1,5 +1,5 @@
-import { serial } from "drizzle-orm/mysql-core";
-import { pgTable, text, varchar } from "drizzle-orm/pg-core";
+import { serial, pgTable, text, varchar } from "drizzle-orm/pg-core";
+
 
 export const MockInterview=pgTable('mockInterview',{
     id:serial('id').primaryKey(),
