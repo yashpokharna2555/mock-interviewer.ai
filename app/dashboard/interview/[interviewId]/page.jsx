@@ -38,6 +38,11 @@ const Interview = ({ params }) => {
                 }
 
             </div>
+            <div className='flex flex-col my-5'>
+                <h2 className='text-lg'>Job Role/ Job Position: {interviewData.jobPosition}</h2>
+                <h2 className='text-lg'>Job Description/ Tech Stack: {interviewData.jobDesc}</h2>
+                <h2 className='text-lg'>Years of Experience {interviewData.jobExperience}</h2>
+            </div>
         </div>
     )
 }
